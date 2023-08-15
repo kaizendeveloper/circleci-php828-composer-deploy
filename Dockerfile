@@ -3,7 +3,7 @@ MAINTAINER Miguel Delli Carpini <migueldellicarpini@gmail.com>
 
 RUN addgroup -g 3434 circleci && adduser -u 3434 -G circleci -h /home/circleci -D circleci
 
-RUN apk add --no-cache bzip2-dev icu-dev gettext-dev libxml2-dev libxslt-dev libjpeg-turbo-dev libpng-dev freetype-dev libzip-dev libexif-dev bash curl git \
+RUN apk add --no-cache bzip2-dev icu-dev gettext-dev libxml2-dev libxslt-dev libjpeg-turbo-dev libpng-dev freetype-dev libzip-dev libexif-dev bash curl git rsync \
     && docker-php-ext-install mysqli \
     && docker-php-ext-enable mysqli \
     && docker-php-ext-install pdo_mysql \
